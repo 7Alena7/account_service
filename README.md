@@ -1,10 +1,17 @@
 # Account Service
-Сервис отвечает за ведение счетов клиентов
+Service handles users accounts
 
-## Сущности
-* Счёт
-* Баланс
-* Аудит баланса
-* Запрос
+# Technologies Used
 
-## Бизнес процессы
+* [Spring Boot](https://spring.io/projects/spring-boot) – Primary framework
+* [PostgreSQL](https://www.postgresql.org/) – Main Relational DataBase
+* [Liquibase](https://www.liquibase.org/) – Manages database schema migrations
+* [Gradle](https://gradle.org/) – Build system for the application
+* [Lombok](https://projectlombok.org/) – Work with POJO classes
+* [MapStruct](https://mapstruct.org/) – Mapping between POJO classes
+
+# DataBase
+
+* The database is launched in a separate service [infra](../infra)
+* Redis is also started as a single instance in infra infra [infra](../infra)
+* Liquibase automatically applies necessary migrations to a fresh PostgreSQL instance on application startup
